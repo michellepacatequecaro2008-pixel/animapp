@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- FORMULARIO PRINCIPAL -->
+    <main class="formulario-contenedor">
+        <h2>Crear cuenta (Cliente)</h2>
+        <p>Solo se registran clientes. Veterinarios, auxiliares y administradores son gestionados por el sistema.</p>
+
+        <!-- Mensaje dinámico para alertas del JavaScript -->
+        <div id="mensaje-alerta" class="alerta" style="display: none;"></div>
+
+        <!-- Formulario de registro de cliente con id para JavaScript -->
+        <form id="form-registro" action="#" method="post" class="formulario" novalidate>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+
+            <label for="documento">Número de Documento</label>
+            <input type="text" id="documento" name="documento" placeholder="Número de documento">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567">
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+
+            <label for="clave">Contraseña</label>
+            <div class="campo-clave">
+                <input type="password" id="clave" name="clave" placeholder="Contraseña">
+                <button type="button" id="btn-toggle-clave" class="btn-ojo" aria-label="Mostrar contraseña">👁</button>
+            </div>
+
+            <label for="confirmar">Confirmar contraseña</label>
+            <div class="campo-clave">
+                <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar contraseña">
+                <button type="button" id="btn-toggle-confirmar" class="btn-ojo" aria-label="Mostrar confirmación de contraseña">👁</button>
+            </div>
+
+            <button type="submit" class="btn btn-verde">Crear cuenta</button>
+        </form>
+
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- VINCULACIÓN DEL SCRIPT EXTERNO DE VALIDACIONES -->
+    <script src="js/registro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Alfort Animal Care</h1>
+        </a>
+    </header>
+
+    <!-- FORMULARIO PRINCIPAL DE LOGIN -->
+    <main class="formulario-contenedor">
+        <h2>Iniciar sesión</h2>
+
+        <!-- Mensaje dinámico de alerta para JavaScript -->
+        <div id="mensaje-alerta" class="alerta" style="display: none;"></div>
+
+        <!-- Formulario con novalidate para control de JS -->
+        <form id="form-login" action="#" method="post" class="formulario" novalidate>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+
+            <label for="clave">Contraseña</label>
+            <div class="campo-clave">
+                <input type="password" id="clave" name="clave" placeholder="Ingresa tu contraseña">
+                <button type="button" id="btn-toggle-clave" class="btn-ojo" aria-label="Mostrar contraseña">👁</button>
+            </div>
+
+            <button type="submit" class="btn btn-verde">Iniciar sesión</button>
+        </form>
+
+        <p><a href="recuperar-password.html">¿Olvidaste tu contraseña?</a></p>
+        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Alfort Animal Care</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- VINCULACIÓN DEL SCRIPT EXTERNO DE VALIDACIONES -->
+    <script src="js/login.js"></script>
+
+</body>
+</html>

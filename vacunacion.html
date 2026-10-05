@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacunación - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <div class="busqueda">
+            <input type="text" id="input-buscar" placeholder="¿Qué estás buscando para tu mascota?">
+            <button type="button" id="btn-buscar">Buscar</button>
+        </div>
+        <div class="acciones-usuario">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito (<span id="cantidad-carrito">0</span>)</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html" class="activo">Vacunación</a>
+        <a href="citas.html">Citas</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <section class="seccion-vacunacion">
+            <h1>Importancia de la vacunación</h1>
+            <p class="subtitulo">La vacunación protege a tus mascotas de enfermedades graves y contagiosas. Es la medida preventiva más efectiva para garantizar su longevidad y bienestar. <em>Esta información es de carácter orientativo y no sustituye la valoración médica veterinaria.</em></p>
+
+            <!-- CONTENEDOR DE TARJETAS POR ESPECIE -->
+            <div class="contenedor-tarjetas">
+                
+                <!-- Esquema Perros -->
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/vacunas-perros.jpg" alt="Vacunación Canina" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h3>Perros</h3>
+                    <p>Esquema básico y refuerzos: Moquillo, Parvovirus, Hepatitis infecciosa, Leptospirosis, Rabia y Traqueobronquitis (Tos de las perreras).</p>
+                    <a href="citas.html?servicio=vacunacion&especie=perro" class="btn btn-agendar-vacuna" data-especie="Perros">Agendar vacunación</a>
+                </article>
+
+                <!-- Esquema Gatos -->
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/vacunas-gatos.jpg" alt="Vacunación Felina" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h3>Gatos</h3>
+                    <p>Esquema básico y refuerzos: Triple Felina (Rinotraqueítis, Calicivirus, Panleucopenia), Leucemia Felina (FeLV) y Rabia.</p>
+                    <a href="citas.html?servicio=vacunacion&especie=gato" class="btn btn-agendar-vacuna" data-especie="Gatos">Agendar vacunación</a>
+                </article>
+
+                <!-- Otras especies -->
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/vacunas-otras.jpg" alt="Vacunación Otras Especies" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h3>Otras Mascotas</h3>
+                    <p>Conejos, hurones y animales no convencionales pueden requerir biológicos específicos (ej. Mixomatosis o Enfermedad Hemorrágica Viral).</p>
+                    <a href="citas.html?servicio=vacunacion&especie=otra" class="btn btn-agendar-vacuna" data-especie="Otras especies">Agendar vacunación</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT MODULAR DE VACUNACIÓN -->
+    <script src="js/vacunacion.js"></script>
+
+</body>
+</html>

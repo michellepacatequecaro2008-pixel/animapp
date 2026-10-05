@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Veterinario - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
+        <h1>Perfil del Veterinario</h1>
+
+        <!-- FICHA DE INFORMACIÓN PERSONAL -->
+        <section class="tarjeta-perfil">
+            <h2>Datos del Profesional</h2>
+            
+            <div class="info-campo">
+                <strong>Nombre:</strong>
+                <span id="perfil-nombre">Dra. Ana López</span>
+            </div>
+            <div class="info-campo">
+                <strong>Especialidad:</strong>
+                <span id="perfil-especialidad">Cirugía y Medicina Interna</span>
+            </div>
+            <div class="info-campo">
+                <strong>Correo Electrónico:</strong>
+                <span id="perfil-correo">ana.lopez@alfort.com</span>
+            </div>
+            <div class="info-campo">
+                <strong>Teléfono:</strong>
+                <span id="perfil-telefono">315 456 7890</span>
+            </div>
+            <div class="info-campo">
+                <strong>Horario de Atención:</strong>
+                <span id="perfil-horario">Lunes a Viernes 09:00 AM - 06:00 PM</span>
+            </div>
+
+            <div class="acciones-perfil">
+                <a href="editar-perfil-veterinario.html" class="btn">Editar Perfil</a>
+            </div>
+        </section>
+
+        <!-- TABLA DE PRÓXIMAS CITAS -->
+        <section class="seccion-tabla">
+            <h2>Próximas Citas Asignadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Cliente</th>
+                        <th>Motivo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-09-15</td>
+                        <td>10:30 AM</td>
+                        <td>Max</td>
+                        <td>Juan Pérez</td>
+                        <td>Vacunación</td>
+                        <td><a href="citas.html" class="btn-tabla">Ver</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- NAVEGACIÓN Y CIERRE DE SESIÓN -->
+        <div class="acciones-retorno">
+            <a href="dashboard-veterinario.html" class="btn btn-secundario">← Volver al Panel</a>
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE PERFIL -->
+    <script src="js/perfil-veterinario.js"></script>
+
+</body>
+</html>

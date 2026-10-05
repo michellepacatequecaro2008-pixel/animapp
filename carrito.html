@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <div class="acciones-usuario">
+            <a href="tienda.html" class="btn">Seguir comprando</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html">Vacunación</a>
+        <a href="citas.html">Citas</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <h1>Tu Carrito de Compras</h1>
+
+        <!-- TABLA DE PRODUCTOS -->
+        <section class="seccion-tabla">
+            <div class="tabla-contenedor">
+                <table class="tabla" id="tabla-carrito">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-carrito">
+                        <!-- Generado dinámicamente desde js/carrito.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- RESUMEN DE COMPRA -->
+            <div class="resumen-carrito" style="margin-top: 20px; text-align: right;">
+                <h3>Total: <span id="simbolo-moneda">$</span><span id="total">0</span> COP</h3>
+                <div class="acciones-formulario" style="justify-content: flex-end; gap: 10px; margin-top: 15px;">
+                    <button type="button" id="btn-vaciar" class="btn btn-rojo">Vaciar Carrito</button>
+                    <button type="button" id="btn-pagar" class="btn btn-verde">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE CARRITO -->
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

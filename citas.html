@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <div class="busqueda">
+            <input type="text" placeholder="¿Qué estás buscando para tu mascota?">
+            <button type="button">Buscar</button>
+        </div>
+        <div class="acciones-usuario">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html">Vacunación</a>
+        <a href="citas.html" class="activo">Citas</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <h1>Agendar Cita Médica / Servicio</h1>
+
+        <!-- ALERTA/AVISO DE SESIÓN -->
+        <div id="aviso-sesion" class="aviso" style="display:none; margin-bottom: 20px;">
+            <p>Debes registrarte o iniciar sesión para poder agendar y gestionar tus citas.</p>
+            <div class="acciones-formulario" style="margin-top: 10px;">
+                <a href="login.html" class="btn">Iniciar sesión</a>
+                <a href="registro.html" class="btn btn-verde">Registrarme</a>
+            </div>
+        </div>
+
+        <!-- FORMULARIO DE RESERVA DE CITA -->
+        <section class="seccion-formulario">
+            <form id="form-cita" class="formulario">
+                <div class="grupo-campo">
+                    <label for="tipo">Tipo de servicio o cita</label>
+                    <select id="tipo" name="tipo" class="input-control" required>
+                        <option value="">Seleccione un servicio...</option>
+                        <option value="Consulta general">Consulta general</option>
+                        <option value="Consulta especializada">Consulta especializada</option>
+                        <option value="Vacunación">Vacunación</option>
+                        <option value="Desparasitación">Desparasitación</option>
+                        <option value="Peluquería">Peluquería</option>
+                        <option value="Baño y secado">Baño y secado</option>
+                        <option value="Higiene básica">Higiene básica</option>
+                        <option value="Tratamiento de spa">Tratamiento de spa</option>
+                        <option value="Urgencias">Urgencias</option>
+                        <option value="Diagnóstico por imagen/laboratorio">Diagnóstico por imagen/laboratorio</option>
+                        <option value="Cirugía/Esterilización">Cirugía/Esterilización</option>
+                        <option value="Otro servicio">Otro servicio</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mascota">Mascota</label>
+                    <select id="mascota" name="mascota" class="input-control" required>
+                        <option value="">Cargando mascotas...</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" class="input-control" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" class="input-control" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="observaciones">Observaciones / Motivo</label>
+                    <textarea id="observaciones" name="observaciones" class="input-control" rows="3" placeholder="Detalla aquí cualquier síntoma o especificación sobre el servicio"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-verde" style="width: 100%;">Confirmar y Agendar Cita</button>
+            </form>
+        </section>
+
+        <!-- LISTADO DE CITAS PROGRAMADAS -->
+        <section class="seccion-tabla" style="margin-top: 40px;">
+            <h2>Mis Citas Programadas</h2>
+            <div class="tabla-contenedor">
+                <table class="tabla" id="tabla-citas">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Mascota</th>
+                            <th>Servicio / Tipo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-citas">
+                        <!-- Generado dinámicamente desde js/citas.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT MODULAR DE CITAS -->
+    <script src="js/citas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrador - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- ÁREA PRINCIPAL DEL DASHBOARD -->
+    <main class="container">
+        <h1>Panel del Administrador</h1>
+
+        <!-- Saludo dinámico -->
+        <div class="bienvenida">
+            <strong>Bienvenido/a,</strong> <span id="nombre-admin">Cargando usuario...</span>
+        </div>
+
+        <!-- TARJETAS DE MÉTRICAS MUESTRA -->
+        <section class="cards">
+            <article class="card">
+                <h3>124</h3>
+                <p>Clientes</p>
+            </article>
+            <article class="card">
+                <h3>187</h3>
+                <p>Mascotas</p>
+            </article>
+            <article class="card">
+                <h3>12</h3>
+                <p>Citas Hoy</p>
+            </article>
+            <article class="card">
+                <h3>5</h3>
+                <p>Veterinarios</p>
+            </article>
+            <article class="card">
+                <h3>8</h3>
+                <p>Auxiliares</p>
+            </article>
+        </section>
+
+        <!-- ACCIONES RÁPIDAS ADMINISTRATIVAS -->
+        <div class="acciones-dashboard">
+            <a href="perfil-administrador.html" class="btn">Ver Mi Perfil</a>
+            <a href="citas.html" class="btn">Gestionar Citas</a>
+            <a href="tienda.html" class="btn">Gestión de Productos</a>
+        </div>
+
+        <!-- TABLA DE ÚLTIMAS CITAS DEL SISTEMA -->
+        <section class="seccion-tabla">
+            <h2>Últimas Citas Registradas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Cliente</th>
+                        <th>Veterinario</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-09-14</td>
+                        <td>04:00 PM</td>
+                        <td>Rocky</td>
+                        <td>Pedro Sánchez</td>
+                        <td>Dr. Luis Méndez</td>
+                        <td>Completada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CERRAR SESIÓN -->
+        <div class="cerrar-sesion-contenedor">
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE DASHBOARD DE ADMINISTRADOR -->
+    <script src="js/dashboard-administrador.js"></script>
+
+</body>
+</html>

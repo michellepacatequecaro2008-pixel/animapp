@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Veterinario - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- ÁREA PRINCIPAL DEL DASHBOARD -->
+    <main class="container">
+        <h1>Panel del Veterinario</h1>
+
+        <!-- Mensaje de bienvenida dinámico -->
+        <div class="bienvenida">
+            <strong>Bienvenido/a,</strong> <span id="nombre-vet">Cargando usuario...</span>
+        </div>
+
+        <!-- TARJETAS DE RESUMEN DE ACTIVIDAD -->
+        <section class="cards">
+            <article class="card">
+                <h3>6</h3>
+                <p>Citas Hoy</p>
+            </article>
+            <article class="card">
+                <h3>18</h3>
+                <p>Citas esta Semana</p>
+            </article>
+            <article class="card">
+                <h3>42</h3>
+                <p>Pacientes Atendidos</p>
+            </article>
+        </section>
+
+        <!-- ACCIONES RÁPIDAS -->
+        <div class="acciones-dashboard">
+            <a href="perfil-veterinario.html" class="btn">Ver Mi Perfil</a>
+            <a href="citas.html" class="btn">Mi Agenda</a>
+            <a href="historias-clinicas.html" class="btn">Historial de Pacientes</a>
+        </div>
+
+        <!-- TABLA DE CITAS DEL DÍA -->
+        <section class="seccion-tabla">
+            <h2>Citas de Hoy</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Cliente</th>
+                        <th>Motivo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:30 AM</td>
+                        <td>Luna</td>
+                        <td>María Torres</td>
+                        <td>Revisión post-operatoria</td>
+                        <td>Pendiente</td>
+                        <td><a href="historias-clinicas.html" class="btn-tabla">Atender</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CERRAR SESIÓN -->
+        <div class="cerrar-sesion-contenedor">
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE DASHBOARD -->
+    <script src="js/dashboard-veterinario.js"></script>
+
+</body>
+</html>

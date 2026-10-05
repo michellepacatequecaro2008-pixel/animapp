@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Administrador - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
+        <h1>Perfil del Administrador</h1>
+
+        <!-- INFORMACIÓN DEL ADMINISTRADOR -->
+        <section class="tarjeta-perfil">
+            <h2>Datos de la Cuenta</h2>
+            <div class="info-campo">
+                <strong>Nombre:</strong>
+                <span id="admin-nombre">María González</span>
+            </div>
+            <div class="info-campo">
+                <strong>Email:</strong>
+                <span id="admin-correo">admin@alfort.com</span>
+            </div>
+            <div class="info-campo">
+                <strong>Rol:</strong>
+                <span>Administrador del Sistema</span>
+            </div>
+            <div class="info-campo">
+                <strong>Último Acceso:</strong>
+                <span id="admin-ultimo-acceso">2026-09-14 14:30</span>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN -->
+            <div class="acciones-perfil">
+                <a href="editar-perfil-admin.html" class="btn">Editar Perfil</a>
+                <a href="usuarios.html" class="btn">Gestionar Usuarios</a>
+                <a href="reportes.html" class="btn btn-secundario">Ver Reportes</a>
+            </div>
+        </section>
+
+        <!-- TARJETAS DE RESUMEN DEL SISTEMA -->
+        <section class="seccion-tabla" style="margin-top: 30px;">
+            <h2>Resumen del Sistema</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>124</h3>
+                    <p>Clientes</p>
+                </article>
+                <article class="card">
+                    <h3>187</h3>
+                    <p>Mascotas</p>
+                </article>
+                <article class="card">
+                    <h3>12</h3>
+                    <p>Citas Hoy</p>
+                </article>
+                <article class="card">
+                    <h3>5</h3>
+                    <p>Veterinarios</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN Y CIERRE DE SESIÓN -->
+        <div class="acciones-retorno" style="margin-top: 30px;">
+            <a href="dashboard-administrador.html" class="btn btn-secundario">← Volver al Panel</a>
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE PERFIL -->
+    <script src="js/perfil-administrador.js"></script>
+
+</body>
+</html>

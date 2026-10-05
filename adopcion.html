@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <div class="busqueda">
+            <input type="text" placeholder="¿Qué estás buscando para tu mascota?">
+            <button type="button" class="btn">Buscar</button>
+        </div>
+        <div class="acciones-usuario">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html">Vacunación</a>
+        <a href="citas.html">Citas</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html" class="activo">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <h1>Mascotas en Adopción</h1>
+
+        <!-- FILTROS DE BÚSQUEDA -->
+        <section class="filtros-seccion">
+            <div class="filtros">
+                <button type="button" class="btn btn-filtro activo" data-categoria="todos">Todos</button>
+                <button type="button" class="btn btn-filtro" data-categoria="perro">Perros</button>
+                <button type="button" class="btn btn-filtro" data-categoria="gato">Gatos</button>
+                <button type="button" class="btn btn-filtro" data-categoria="otro">Otras especies</button>
+            </div>
+        </section>
+
+        <!-- TARJETAS DE MASCOTAS -->
+        <section class="contenedor-tarjetas" style="margin-top: 20px;">
+            <article class="tarjeta" data-especie="perro">
+                <div class="img-tarjeta">
+                    <img src="img/mascotas/luna.jpg" alt="Foto de Luna" class="img-mascota" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="placeholder-img" style="display:none;">Luna</div>
+                </div>
+                <h3>Luna</h3>
+                <p><strong>Edad:</strong> 2 años | <strong>Sexo:</strong> Hembra | <strong>Tamaño:</strong> Mediano</p>
+                <p><strong>Estado:</strong> <span class="badge badge-disponible">Disponible</span></p>
+                <p>Muy cariñosa, juguetona y sociable con otros animales.</p>
+                <button type="button" class="btn btn-solicitar-adopcion" data-mascota="Luna">Quiero adoptar</button>
+            </article>
+
+            <article class="tarjeta" data-especie="perro">
+                <div class="img-tarjeta">
+                    <img src="img/mascotas/max.jpg" alt="Foto de Max" class="img-mascota" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="placeholder-img" style="display:none;">Max</div>
+                </div>
+                <h3>Max</h3>
+                <p><strong>Edad:</strong> 1 año | <strong>Sexo:</strong> Macho | <strong>Tamaño:</strong> Grande</p>
+                <p><strong>Estado:</strong> <span class="badge badge-disponible">Disponible</span></p>
+                <p>Activo, protector y con excelente entrenamiento básico.</p>
+                <button type="button" class="btn btn-solicitar-adopcion" data-mascota="Max">Quiero adoptar</button>
+            </article>
+        </section>
+
+        <!-- SECCIÓN DE AYUDA Y VOLUNTARIADO -->
+        <section class="seccion-ayuda" style="margin-top: 40px;">
+            <h2>¿Quieres ayudar sin adoptar?</h2>
+            <div class="contenedor-tarjetas" style="margin-top: 20px;">
+                
+                <article class="tarjeta">
+                    <h3>Apadrinar una mascota</h3>
+                    <p>Contribuye con su alimentación, vacunación y cuidados temporales.</p>
+                    <div class="grupo-campo" style="margin: 15px 0;">
+                        <label for="periodo-padrino">Período de aporte:</label>
+                        <select id="periodo-padrino" class="input-control">
+                            <option value="7">7 días ($30.000 COP)</option>
+                            <option value="15">15 días ($60.000 COP)</option>
+                            <option value="30">30 días ($110.000 COP)</option>
+                        </select>
+                    </div>
+                    <button type="button" id="btn-apadrinar" class="btn">Apadrinar Ahora</button>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Ser Voluntario</h3>
+                    <p>Apóyanos en jornadas de adopción, bienestar animal, eventos y logística en la sede.</p>
+                    <div style="margin-top: 45px;">
+                        <button type="button" id="btn-voluntario" class="btn btn-secundario">Quiero ser voluntario</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE SOLICITUD DE ADOPCIÓN (OCULTO INICIALMENTE) -->
+        <section id="contenedor-form-adopcion" class="tarjeta-formulario" style="display: none; margin-top: 40px;">
+            <h2>Solicitud de Adopción: <span id="nombre-mascota-solicitud"></span></h2>
+            <form id="form-adopcion" class="formulario">
+                
+                <div class="grupo-campo">
+                    <label for="adop-nombre">Nombre Completo *</label>
+                    <input type="text" id="adop-nombre" class="input-control" required placeholder="Ej. Juan Pérez">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-telefono">Teléfono de Contacto *</label>
+                    <input type="tel" id="adop-telefono" class="input-control" required placeholder="Ej. 3001234567">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-correo">Correo Electrónico *</label>
+                    <input type="email" id="adop-correo" class="input-control" required placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-vivienda">Tipo de Vivienda *</label>
+                    <select id="adop-vivienda" class="input-control" required>
+                        <option value="">Seleccione...</option>
+                        <option value="casa">Casa propia</option>
+                        <option value="apartamento">Apartamento propio</option>
+                        <option value="arriendo">Inmueble en arriendo</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-mascotas">¿Tiene otras mascotas en casa? *</label>
+                    <select id="adop-mascotas" class="input-control" required>
+                        <option value="">Seleccione...</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-experiencia">¿Tiene experiencia previa con mascotas? *</label>
+                    <select id="adop-experiencia" class="input-control" required>
+                        <option value="">Seleccione...</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-motivo">Motivo de la Adopción *</label>
+                    <textarea id="adop-motivo" class="input-control" rows="3" required placeholder="¿Por qué deseas adoptar esta mascota?"></textarea>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="adop-observaciones">Observaciones adicionales</label>
+                    <textarea id="adop-observaciones" class="input-control" rows="2" placeholder="Información relevante sobre tu hogar o rutina"></textarea>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" class="btn btn-verde">Enviar Solicitud</button>
+                    <button type="button" id="btn-cancelar-adopcion" class="btn btn-secundario">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE ADOPCIÓN -->
+    <script src="js/adopcion.js"></script>
+
+</body>
+</html>

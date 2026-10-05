@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animapp - Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo-nombre">
+            <!-- Etiqueta img apuntando a la carpeta de imágenes -->
+            <a href="index.html">
+                <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            </a>
+            <h1>Animapp</h1>
+        </div>
+
+        <!-- Barra de búsqueda con formulario semántico -->
+        <form class="busqueda" action="tienda.html" method="GET">
+            <input type="text" name="q" placeholder="¿Qué estás buscando para tu mascota?">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Botones de usuario y carrito -->
+        <div class="acciones-usuario">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN SEMÁNTICO -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html">Vacunación</a>
+        <a href="citas.html">Citas</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- BANNER PRINCIPAL -->
+        <section class="banner">
+            <div class="banner-texto">
+                <h2>Cuidamos a tus mascotas con amor</h2>
+                <p>Veterinaria en Engativá, Bogotá. Atención profesional y cariñosa.</p>
+                <a href="citas.html" class="btn btn-grande">Agendar cita</a>
+            </div>
+        </section>
+
+        <!-- TARJETAS DESTACADAS -->
+        <section class="tarjetas">
+            <h2 class="titulo-seccion">Nuestros servicios principales</h2>
+
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta Vacunación -->
+                <article class="tarjeta">
+                    <img src="img/vacunacion.jpg" alt="Servicio de Vacunación" class="img-tarjeta">
+                    <h3>Vacunación</h3>
+                    <p>Protege a tu mascota con el esquema de vacunas recomendado.</p>
+                    <a href="vacunacion.html" class="btn">Ver más</a>
+                </article>
+
+                <!-- Tarjeta Servicios -->
+                <article class="tarjeta">
+                    <img src="img/servicios.jpg" alt="Servicios Médicos Veterinarios" class="img-tarjeta">
+                    <h3>Servicios</h3>
+                    <p>Consultas, estética, spa y mucho más para tu compañero.</p>
+                    <a href="servicios.html" class="btn">Ver más</a>
+                </article>
+
+                <!-- Tarjeta Guardería -->
+                <article class="tarjeta">
+                    <img src="img/guarderia.jpg" alt="Guardería Canina y Felina" class="img-tarjeta">
+                    <h3>Guardería</h3>
+                    <p>Deja a tu mascota en buenas manos mientras no estás.</p>
+                    <a href="guarderia.html" class="btn">Ver más</a>
+                </article>
+
+                <!-- Tarjeta Tienda -->
+                <article class="tarjeta">
+                    <img src="img/tienda.jpg" alt="Tienda de Productos Veterinarios" class="img-tarjeta">
+                    <h3>Tienda</h3>
+                    <p>Alimentos, juguetes, camas y productos de cuidado.</p>
+                    <a href="tienda.html" class="btn">Ver más</a>
+                </article>
+
+                <!-- Tarjeta Adopción -->
+                <article class="tarjeta">
+                    <img src="img/adopcion.jpg" alt="Programa de Adopción" class="img-tarjeta">
+                    <h3>Adopción</h3>
+                    <p>Dale un hogar a una mascota que lo necesita.</p>
+                    <a href="adopcion.html" class="btn">Ver más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+                <p>Horarios: Lunes a Sábado 8:00 a.m. - 6:00 p.m.</p>
+            </address>
+        </div>
+
+        <div class="ubicacion-mapa">
+            <p><strong>Nuestra Ubicación:</strong></p>
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+
+        <div class="redes-sociales">
+            <p>Redes sociales: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

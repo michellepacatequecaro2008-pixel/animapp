@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <div class="busqueda">
+            <input type="text" id="input-buscar-servicio" placeholder="¿Qué servicio buscas para tu mascota?">
+            <button type="button" id="btn-buscar-servicio">Buscar</button>
+        </div>
+        <div class="acciones-usuario">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn-verde">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="vacunacion.html">Vacunación</a>
+        <a href="citas.html">Citas</a>
+        <a href="servicios.html" class="activo">Servicios</a>
+        <a href="guarderia.html">Guardería</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="adopcion.html">Adopción</a>
+        <a href="perfil-cliente.html">Mi perfil</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <h1>Nuestros Servicios Especializados</h1>
+        <p class="subtitulo">Ofrecemos un cuidado integral para la salud, bienestar y estética de tu mascota en Engativá.</p>
+
+        <!-- CATEGORÍA 1: ESTÉTICA Y SPA -->
+        <section class="seccion-servicios">
+            <h2>Servicios de Estética y Spa</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/bano.jpg" alt="Baño y secado" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Baño y secado</h4>
+                    <p>Baño profesional con champú hipoalergénico y secado cuidadoso.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Baño y secado">Agendar Cita</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/corte.jpg" alt="Corte de pelo" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Corte de pelo</h4>
+                    <p>Corte especializado según la raza y preferencia del propietario.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Peluquería">Agendar Cita</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/higiene.jpg" alt="Higiene básica" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Higiene básica</h4>
+                    <p>Limpieza profunda de oídos, corte de uñas y cepillado dental.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Higiene básica">Agendar Cita</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/spa.jpg" alt="Tratamientos de spa" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Tratamientos de spa</h4>
+                    <p>Hidromasaje, aromaterapia y mascarillas relajantes e hidratantes.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Tratamiento de spa">Agendar Cita</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 2: MÉDICOS Y SALUD -->
+        <section class="seccion-servicios" style="margin-top: 40px;">
+            <h2>Servicios Médicos y Salud Veterinario</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/consulta.jpg" alt="Consulta médica" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Consulta general y especializada</h4>
+                    <p>Evaluación clínica profesional con médicos veterinarios certificados.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Consulta general">Agendar Cita</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/vacunas.jpg" alt="Vacunación" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Vacunación y desparasitación</h4>
+                    <p>Planes de inmunización preventiva y control de parásitos internos/externos.</p>
+                    <a href="vacunacion.html" class="btn btn-verde">Ver Esquema</a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/urgencias.jpg" alt="Urgencias" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Urgencias e internación</h4>
+                    <p>Atención médica inmediata y monitoreo crítico durante contingencias.</p>
+                    <button type="button" class="btn btn-rojo btn-agendar-servicio" data-servicio="Urgencias">Agendar Urgencia</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/laboratorio.jpg" alt="Diagnóstico" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Diagnóstico por imagen y lab</h4>
+                    <p>Ecografía, rayos X y procesamiento de exámenes de laboratorio clínico.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Diagnóstico por imagen/laboratorio">Agendar Cita</button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/cirugia.jpg" alt="Cirugía" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Cirugía y esterilización</h4>
+                    <p>Quirófano equipado para procedimientos de tejidos blandos y esterilizaciones.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Cirugía/Esterilización">Agendar Cita</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORÍA 3: ADICIONALES Y BIENESTAR -->
+        <section class="seccion-servicios" style="margin-top: 40px; margin-bottom: 40px;">
+            <h2>Servicios Complementarios</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/guarderia.jpg" alt="Guardería" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Guardería y hospedaje</h4>
+                    <p>Cuidado diario supervisado con áreas de juego y descanso confortable.</p>
+                    <a href="guarderia.html" class="btn">Ver Planes Guardería</a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="img-tarjeta">
+                        <img src="img/servicios/nutricion.jpg" alt="Nutrición" onerror="this.src='img/placeholder.jpg';">
+                    </div>
+                    <h4>Asesoría nutricional</h4>
+                    <p>Diseño de dietas personalizadas para la etapa de vida o patología de tu mascota.</p>
+                    <button type="button" class="btn btn-agendar-servicio" data-servicio="Consulta especializada">Agendar Asesoría</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD DE SERVICIOS -->
+    <script src="js/servicios.js"></script>
+
+</body>
+</html>

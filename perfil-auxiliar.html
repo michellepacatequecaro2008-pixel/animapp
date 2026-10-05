@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Auxiliar - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
+        <h1>Perfil del Auxiliar Veterinario</h1>
+
+        <!-- INFORMACIÓN DEL AUXILIAR -->
+        <section class="tarjeta-perfil">
+            <h2>Datos de la Cuenta</h2>
+            <div class="info-campo">
+                <strong>Nombre:</strong>
+                <span id="aux-nombre">Carlos Ruiz</span>
+            </div>
+            <div class="info-campo">
+                <strong>Email:</strong>
+                <span id="aux-correo">carlos.ruiz@alfort.com</span>
+            </div>
+            <div class="info-campo">
+                <strong>Teléfono:</strong>
+                <span id="aux-telefono">310 987 6543</span>
+            </div>
+            <div class="info-campo">
+                <strong>Turno:</strong>
+                <span id="aux-turno">Mañana (08:00 - 14:00)</span>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN -->
+            <div class="acciones-perfil">
+                <a href="editar-perfil-auxiliar.html" class="btn">Editar Perfil</a>
+                <a href="tareas-auxiliar.html" class="btn btn-secundario">Ver Todas las Tareas</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TAREAS ASIGNADAS -->
+        <section class="seccion-tabla" style="margin-top: 30px;">
+            <h2>Tareas Asignadas Hoy</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-tareas">
+                        <tr>
+                            <td>09:00 AM</td>
+                            <td>Preparar sala de cirugía para esterilización</td>
+                            <td><span class="badge badge-pendiente">Pendiente</span></td>
+                            <td>
+                                <button type="button" class="btn btn-pequeno btn-completar">Marcar completada</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM</td>
+                            <td>Organización de insumos en farmacia</td>
+                            <td><span class="badge badge-pendiente">Pendiente</span></td>
+                            <td>
+                                <button type="button" class="btn btn-pequeno btn-completar">Marcar completada</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN Y CIERRE DE SESIÓN -->
+        <div class="acciones-retorno" style="margin-top: 30px;">
+            <a href="dashboard-auxiliar.html" class="btn btn-secundario">← Volver al Panel</a>
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE PERFIL -->
+    <script src="js/perfil-auxiliar.js"></script>
+
+</body>
+</html>

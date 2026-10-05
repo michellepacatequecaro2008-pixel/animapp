@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Cliente - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+    </header>
+
+    <!-- ÁREA PRINCIPAL DEL DASHBOARD -->
+    <main class="container">
+        <h1>Panel del Cliente</h1>
+
+        <!-- Muestra de bienvenida dinámica -->
+        <div class="bienvenida">
+            <strong>Bienvenido/a,</strong> <span id="nombre-usuario">Cargando usuario...</span>
+        </div>
+
+        <!-- TARJETAS DE RESUMEN DE ACTIVIDAD -->
+        <section class="cards">
+            <article class="card">
+                <h3>2</h3>
+                <p>Mis Mascotas</p>
+            </article>
+            <article class="card">
+                <h3>1</h3>
+                <p>Citas Próximas</p>
+            </article>
+            <article class="card">
+                <h3>5</h3>
+                <p>Consultas Realizadas</p>
+            </article>
+        </section>
+
+        <!-- ACCIONES RÁPIDAS DEL CLIENTE -->
+        <div class="acciones-dashboard">
+            <a href="perfil-cliente.html" class="btn">Ver Mi Perfil</a>
+            <a href="citas.html" class="btn">Agendar Cita</a>
+            <a href="tienda.html" class="btn">Ir a la Tienda</a>
+        </div>
+
+        <!-- TABLA DE PRÓXIMAS CITAS -->
+        <section class="seccion-tabla">
+            <h2>Próximas Citas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Veterinario</th>
+                        <th>Motivo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-09-20</td>
+                        <td>11:00 AM</td>
+                        <td>Max</td>
+                        <td>Dra. Ana López</td>
+                        <td>Control anual</td>
+                        <td><a href="citas.html" class="btn-tabla">Ver detalle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CERRAR SESIÓN -->
+        <div class="cerrar-sesion-contenedor">
+            <button type="button" id="btn-cerrar-sesion" class="btn btn-rojo">Cerrar Sesión</button>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE DASHBOARD -->
+    <script src="js/dashboard-cliente.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Animapp</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO SIMPLE CON NAVEGACIÓN -->
+    <header class="encabezado-simple">
+        <a href="index.html" class="logo-nombre">
+            <img src="/imagenes/logoanimapp.png" alt="Logo Animapp" class="logo-img">
+            <h1>Animapp</h1>
+        </a>
+        <nav>
+            <a href="dashboard-cliente.html" class="btn btn-secundario">Volver al Panel</a>
+        </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container">
+        <h1>Mi Perfil de Usuario</h1>
+
+        <!-- MENSAJE DE ESTADO -->
+        <div id="mensaje-perfil" class="mensaje-alerta hidden"></div>
+
+        <!-- FORMULARIO DE PERFIL -->
+        <form id="form-perfil-cliente" class="form-estandar">
+            
+            <section class="grupo-formulario">
+                <h2>Información Personal</h2>
+                
+                <div class="campo">
+                    <label for="perfil-nombre">Nombre Completo:</label>
+                    <input type="text" id="perfil-nombre" value="Juan Pérez" required>
+                </div>
+
+                <div class="campo">
+                    <label for="perfil-documento">Número de Documento / Cédula:</label>
+                    <input type="text" id="perfil-documento" value="1010234567" readonly disabled>
+                    <small>El número de documento no se puede cambiar por seguridad.</small>
+                </div>
+
+                <div class="campo">
+                    <label for="perfil-correo">Correo Electrónico:</label>
+                    <input type="email" id="perfil-correo" value="cliente@alfort.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="perfil-telefono">Teléfono / Celular:</label>
+                    <input type="tel" id="perfil-telefono" value="3109876543" required>
+                </div>
+
+                <div class="campo">
+                    <label for="perfil-direccion">Dirección de Residencia:</label>
+                    <input type="text" id="perfil-direccion" value="Calle 80 # 70-15, Engativá" required>
+                </div>
+            </section>
+
+            <section class="grupo-formulario">
+                <h2>Seguridad</h2>
+                
+                <div class="campo">
+                    <label for="perfil-password-actual">Contraseña Actual:</label>
+                    <input type="password" id="perfil-password-actual" placeholder="Ingresa tu contraseña actual">
+                </div>
+
+                <div class="campo">
+                    <label for="perfil-password-nueva">Nueva Contraseña (Opcional):</label>
+                    <input type="password" id="perfil-password-nueva" placeholder="Mínimo 6 caracteres">
+                </div>
+            </section>
+
+            <div class="acciones-form">
+                <button type="submit" class="btn">Guardar Cambios</button>
+                <a href="dashboard-cliente.html" class="btn btn-secundario">Cancelar</a>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer class="pie">
+        <div class="info-contacto">
+            <p><strong>Animapp</strong></p>
+            <address>
+                <p>Localidad de Engativá, Bogotá D.C.</p>
+                <p>Contacto: info@alfortanimalcare.com | Tel: 300 123 4567</p>
+            </address>
+        </div>
+        <div class="ubicacion-mapa">
+            <a href="https://maps.google.com/?q=Engativa,Bogota" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE PERFIL -->
+    <script src="js/perfil-cliente.js"></script>
+
+</body>
+</html>
